@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İzmir Hava Durumu - Bento Grid</title>
+    <!-- Harici CSS dosyasını bağlıyoruz -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-container">
+        <!-- 1. Ana Hava Durumu Kartı (2 Sütun, 2 Satır Kaplar) -->
+        <div class="card card-main">
+            <div class="card-header">
+                <span>Bugünkü Hava Durumu</span>
+                <span class="icon">☀️</span>
+            </div>
+            <div>
+                <div class="temp-display">24°C</div>
+                <div class="condition">Açık ve Güneşli</div>
+            </div>
+            <div class="sub-text">En Yüksek: 26°C • En Düşük: 15°C</div>
+        </div>
+
+        <!-- 2. Konum Kartı -->
+        <div class="card card-location">
+            <div class="card-header">
+                <span>Konum</span>
+                <span>📍</span>
+            </div>
+            <div>
+                <div class="location-title">İzmir</div>
+                <div class="sub-text">Türkiye, Karşıyaka</div>
+            </div>
+        </div>
+
+        <!-- 3. Rüzgar Kartı -->
+        <div class="card card-wind">
+            <div class="card-header">
+                <span>Rüzgar</span>
+                <span>💨</span>
+            </div>
+            <div>
+                <div class="metric-value">14 km/s</div>
+                <div class="sub-text">Kuzey-Kuzeybatı (Poyraz)</div>
+            </div>
+        </div>
+
+        <!-- 4. Saatlik Tahminler Kartı (1 Sütun, 2 Satır Kaplar) -->
+        <div class="card card-hourly">
+            <div class="card-header">
+                <span>Saatlik Tahmin</span>
+                <span>⏰</span>
+            </div>
+            <div class="hourly-list">
+                <div class="hourly-item">
+                    <span>13:00</span>
+                    <span>☀️ 24°C</span>
+                </div>
+                <div class="hourly-item">
+                    <span>16:00</span>
+                    <span>🌤️ 23°C</span>
+                </div>
+                <div class="hourly-item">
+                    <span>19:00</span>
+                    <span>🌥️ 20°C</span>
+                </div>
+                <div class="hourly-item">
+                    <span>22:00</span>
+                    <span>🌙 17°C</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Nem Kartı -->
+        <div class="card card-humidity">
+            <div class="card-header">
+                <span>Nem Oranı</span>
+                <span>💧</span>
+            </div>
+            <div>
+                <div class="metric-value">%48</div>
+                <div class="sub-text">Çiy Noktası: 12°C</div>
+            </div>
+        </div>
+
+        <!-- 6. UV İndeksi Kartı -->
+        <div class="card card-uv">
+            <div class="card-header">
+                <span>UV İndeksi</span>
+                <span>🕶️</span>
+            </div>
+            <div>
+                <div class="metric-value">5 / 10</div>
+                <div class="sub-text">Orta seviye, dikkat</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

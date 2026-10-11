@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    /* 3 sütunlu bento grid yapısı */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 satırlı bento grid yapısı */
+    grid-template-rows: repeat(3, 160px);
+    gap: 16px;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Bento Grid Yerleşimleri (Grid Columns & Rows) */
+.card-main {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.4), rgba(30, 41, 59, 0.8));
+}
+
+.card-location {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-hourly {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.card-wind {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-humidity {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-uv {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Kart İçerik Stilleri */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.temp-display {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.condition {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.location-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.sub-text {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.hourly-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.hourly-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hourly-item:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    font-size: 1.8rem;
+}
+
+/* Responsive Uyumluluk */
+@media (max-width: 768px) {
+    .weather-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-main, .card-location, .card-hourly, .card-wind, .card-humidity, .card-uv {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .card {
+        min-height: 180px;
+    }
+}
